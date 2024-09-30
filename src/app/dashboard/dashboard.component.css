@@ -1,0 +1,52 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    /* Màu nền của navbar */
+    padding: 20px 20px;
+    /* Khoảng cách bên trong navbar */
+    color: #fff;
+    /* Màu chữ của navbar */
+    font-size: larger;
+}
+
+.navbar-logo img {
+    height: 40px;
+    /* Điều chỉnh chiều cao logo */
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+    /* Khoảng cách giữa các liên kết */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    /* Màu chữ của liên kết */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline; /* Hiển thị gạch chân khi hover */
+    font-size: calc(1em + 10px); /* Phóng to chữ thêm 1px khi hover */
+  }
+
+.navbar-links a:hover {
+    color: #ddd;
+    /* Màu chữ khi di chuột qua liên kết */
+}

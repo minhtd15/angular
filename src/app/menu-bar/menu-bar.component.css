@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #efeeea;
+  color: black;
+  font-size: larger;
+  border-radius: 10px;
+}
+
+.navbar-user span {
+  font-size: 23px;
+  position: absolute;
+  margin-left: 30px; /* Adjust spacing if needed */
+  margin-top: -18px;
+}
+
+.navbar-links {
+  margin-top: 15px;
+  font-size: 25px;
+  display: flex;
+  list-style: none;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 10%);
+}
+
+.navbar-links li {
+  margin: 0 15px;
+  /* Khoảng cách giữa các liên kết */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  /* Hiển thị gạch chân khi hover */
+  font-size: calc(1em + 10px);
+  /* Phóng to chữ thêm 1px khi hover */
+}
+
+.navbar-links a:hover {
+  color: #9e9733;
+  /* Màu chữ khi di chuột qua liên kết */
+}
+
+
+.navbar-actions {
+  position: absolute; /* Remove it from normal flow */
+  right: 0; /* Align to the left of the screen */
+  margin-right: 20px; /* Optional: adjust margin as needed */
+}
+
+.navbar-actions .logout-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-actions .logout-btn:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}

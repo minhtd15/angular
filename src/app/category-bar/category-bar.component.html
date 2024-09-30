@@ -1,0 +1,8 @@
+<!-- category-bar.component.html -->
+<nav class="category-bar">
+  <ul class="category-links">
+    <li *ngFor="let sport of sports; let i = index" [style.--i]="i">
+      <a [routerLink]="sport.sportUrl">{{ sport.sportName }}</a>
+    </li>
+  </ul>
+</nav>

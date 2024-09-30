@@ -1,0 +1,79 @@
+<div class="home-introduction">
+  <div class="first-intro">
+    <div class="intro-text1">Hey Sportaholic!</div>
+    <h1 class="intro-text2">Welcome to the world of sports</h1>
+    <div class="intro-text3">We are here to bring the best.</div>
+  </div>
+  <img ngSrc="../../assets/court.jpeg" alt="Introduction Image" class="img" height="376" width="564">
+  <div class="second-intro">
+    <div class="second-intro-title">Sportaholic</div>
+    <h1>What it takes to be the greatest?</h1>
+    <div>If someone talks behind your back, so let them stay where they are.
+      <div>Behind you!</div>
+    </div>
+  </div>
+  <h2 class="reserve-by-">
+    Reservation
+  </h2>
+
+  <span class="filtering">
+  <mat-form-field>
+    <mat-label>Sport</mat-label>
+    <mat-select>
+      @for (food of sportList; track food) {
+        <mat-option [value]="food.sportName">{{ food.sportName }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <mat-select>
+      @for (food of sportList; track food) {
+        <mat-option [value]="food.sportName">{{ food.sportName }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>District</mat-label>
+    <mat-select>
+      @for (food of sportList; track food) {
+        <mat-option [value]="food.sportName">{{ food.sportName }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+<!--  <mat-form-field>-->
+<!--    <mat-label>Date</mat-label>-->
+<!--    <mat-select>-->
+<!--      @for (food of sportList; track food) {-->
+<!--        <mat-option [value]="food.sportName">{{ food.sportName }}</mat-option>-->
+<!--      }-->
+<!--    </mat-select>-->
+<!--  </mat-form-field>-->
+    <mat-form-field>
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date">
+    <input matEndDate placeholder="End date">
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+
+    <button mat-raised-button style="font-size: 1.25rem; padding: 5px 40px; margin-bottom: 20px">Basic</button>
+  </span>
+  <div class="carousel-container">
+    <button class="arrow left" (click)="prevPage()" [disabled]="currentPage === 0">&#10094;</button>
+    <div class="display-container">
+      <ng-container *ngFor="let sport of paginatedSports">
+        <app-display [sport]="sport"></app-display>
+      </ng-container>
+    </div>
+    <button class="arrow right" (click)="nextPage()" [disabled]="(currentPage + 1) * itemsPerPage >= sportList.length">
+      &#10095;
+    </button>
+  </div>
+</div>
